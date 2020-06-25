@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29926.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "NYCrimesCube", "NYCrimesCube\NYCrimesCube.dwproj", "{24D21963-16F5-4AB0-9B59-4C2C350CAD58}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{24D21963-16F5-4AB0-9B59-4C2C350CAD58}.Development|Default.ActiveCfg = Development
+		{24D21963-16F5-4AB0-9B59-4C2C350CAD58}.Development|Default.Build.0 = Development
+		{24D21963-16F5-4AB0-9B59-4C2C350CAD58}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {34A7F41E-D309-4D3C-B253-9B1E88A9938E}
+	EndGlobalSection
+EndGlobal

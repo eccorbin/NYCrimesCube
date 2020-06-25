@@ -1,0 +1,356 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="51db4b64-531c-4357-9b48-7aad7b0c0f35" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>NYCrimeCube</ID>
+  <Name>NYCrimeCube</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="8c79e7b6-2c58-43c9-8d60-62963ee3f761">
+      <ID>Victim</ID>
+      <Name>Victim</Name>
+      <DimensionID>Victim</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="3106d5d5-0f25-4941-91bd-4e0fc4194353">
+          <AttributeID>Id Victim</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="66f670ad-2aa5-4d3b-83f1-cfe0de15419c">
+          <AttributeID>Victim Age Group</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7ec8f680-2587-42b0-ac9c-9dcb6a11db3b">
+          <AttributeID>Victim Gender</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="fb1cde4e-47cd-485b-a3c9-a93e1b14eb6c">
+          <AttributeID>Victim Race</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="11b86288-ca02-41a5-ba64-adea26b1d5a8">
+      <ID>Suspect</ID>
+      <Name>Suspect</Name>
+      <DimensionID>Suspect</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="a8d7a1b0-ae90-42ce-ab16-40db175919bb">
+          <AttributeID>Id Suspect</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c1c64cbb-4be8-4d0b-9baa-c8bef4d6a070">
+          <AttributeID>Suspect Age Group</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0f3b1bd8-44bb-4e86-b2b2-64d6bb5e4569">
+          <AttributeID>Suspect Race</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3f6c4173-5cff-40f4-ae40-251f407ca869">
+          <AttributeID>Suspect Gender</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="525c0e72-3db0-4348-b23e-1ff7243deccd">
+      <ID>Crime</ID>
+      <Name>Crime</Name>
+      <DimensionID>Crime</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="5ffffb01-6366-41f3-a64a-0d0382d66598">
+          <AttributeID>Id Crime</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4ce937c6-1f3a-4b06-8d65-532191f8f3cf">
+          <AttributeID>Code</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b54e5b28-e0f2-4bcb-be62-22e7723ca9fa">
+          <AttributeID>Completion</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ebb1a1b9-f81a-43cc-805c-4570c3635c7a">
+          <AttributeID>Type Of Offense</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="4ee5f71a-8e16-4e8f-a72f-8acc1664a699">
+          <HierarchyID>Hiérarchie</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="25a595f6-d5cb-4244-bc7f-f3fcf4aa6b8c">
+      <ID>Date Occured</ID>
+      <Name>Date Occured</Name>
+      <DimensionID>Date Occured</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="3281ccd6-0286-4e50-b3e9-9d64404cde76">
+          <AttributeID>Id Date Occured</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c4e69aa4-7fe0-434a-8271-33a86084e3e5">
+          <AttributeID>Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="08f801d5-57be-49a0-b5e0-08be355e66b9">
+          <AttributeID>Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f376ee5f-b337-4c78-a89f-18697745f458">
+          <AttributeID>Day Of The Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ec512539-e707-4bea-ab43-500c235b8e80">
+          <AttributeID>Day Of The Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2e63b0f1-9bc3-459e-a8e0-6f0764f5e85a">
+          <AttributeID>Day Of The Week</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5979d3a8-1f11-4031-a6f7-9c075070974d">
+          <AttributeID>Hour</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a23f689b-424b-49c6-bc15-dbe47c7dea2f">
+          <AttributeID>Minute</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="97b9f2e8-f635-42bd-905e-a90292e76612">
+          <AttributeID>Quarter</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="92bde981-4d1c-4a67-b92b-43e6a3c37209">
+          <HierarchyID>Hiérarchie</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="ca181624-80d3-400c-86c4-d5b6ac3a033d">
+      <ID>Crime Location</ID>
+      <Name>Crime Location</Name>
+      <DimensionID>Crime Location</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="c61b69d4-8aca-4c65-bab8-97ad2d4551a0">
+          <AttributeID>Id Crime Location</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="dee7af56-06aa-426c-833d-376731d5787f">
+          <AttributeID>District</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="1e724c1e-1ada-4c5c-be04-371837009861">
+          <HierarchyID>Hiérarchie</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="45078761-dbe8-4ef5-94e4-c599b8a0d979">
+      <ID>Date Reported</ID>
+      <Name>Date Reported</Name>
+      <DimensionID>Date Reported</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="5936185d-3aa6-4427-b39e-4dc3e32fecee">
+          <AttributeID>ID Date Reported</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3b561cf5-4b07-4dc7-b3a4-d44ee9c374d7">
+          <AttributeID>Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0250afcf-9904-4c86-b80e-8456e0cbade9">
+          <AttributeID>Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="cfa22ffc-37c7-4841-9ec0-78cb3c8ddbb3">
+          <AttributeID>Day</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="cc5e556c-ce16-4fe9-8abd-3e09671c0ed9">
+          <AttributeID>Day Of The Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="88aa84c3-0e5e-4ad5-ac85-720f88c72eb6">
+          <AttributeID>Day Of The Week</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bed13c88-ee36-41f3-a358-329873489e8c">
+          <AttributeID>Quarter</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="a13436f1-1a53-40a6-9cce-184ff5b81ab3">
+          <HierarchyID>Hiérarchie</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="85540369-6ee4-4274-961f-c44e8ed1cc91">
+      <ID>Reported Crime</ID>
+      <Name>Reported Crime</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="5113fc7b-f513-4316-9fa2-3e1b92ae91d8">
+          <ID>Number Of Crimes</ID>
+          <Name>Number Of Crimes</Name>
+          <Source dwd:design-time-name="c1f421e8-b5bd-416d-821e-1081be45cceb">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="e04a8a28-a2ee-4047-bf81-647ada541b46">
+              <TableID>dbo_ReportedCrime</TableID>
+              <ColumnID>NumberOfCrimes</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="137e4907-a30a-4e26-a2f5-b71deb9d1e9e">
+          <ID>Number of Reported Crime</ID>
+          <Name>Number of Reported Crime</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="2bf82cca-7e52-4aa9-a2dd-fd624ce8498f">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="0e2cd204-d62d-48a7-b074-adbaeef8c910">
+              <TableID>dbo_ReportedCrime</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="aef5af84-9bec-423d-9dcc-2617141f57de">
+          <CubeDimensionID>Victim</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="90e9e6cd-2fbe-4f86-ba6c-6d3a42f6c80c">
+              <AttributeID>Id Victim</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="1e3107b5-1cf1-4a6f-b258-935a5ec5775d">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="b7720136-0739-4012-84e4-2bc77fc10702">
+                    <TableID>dbo_ReportedCrime</TableID>
+                    <ColumnID>IdVictim</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="d986089d-5539-470d-af7c-6cd9a1f02808">
+          <CubeDimensionID>Date Reported</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="0431b185-2099-4bbd-8d55-7682ed109cf7">
+              <AttributeID>ID Date Reported</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="0118aaec-a2aa-4fbb-bacb-2ac753901ec8">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="1a12c261-5301-4309-a5cb-6054076bd0b8">
+                    <TableID>dbo_ReportedCrime</TableID>
+                    <ColumnID>IdDateReported</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="a18fc2ba-396c-4d9d-9140-68670bcecd67">
+          <CubeDimensionID>Suspect</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="1c654ae7-2004-4caf-8cc0-d14521d64de2">
+              <AttributeID>Id Suspect</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="a4c2266f-a8ca-45bc-b3de-f9c2a77e0473">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="d28384c6-82da-4d8f-9cbc-ee0fb7c591ca">
+                    <TableID>dbo_ReportedCrime</TableID>
+                    <ColumnID>IdSuspect</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="29b71455-afca-410f-abeb-986ecc38ce34">
+          <CubeDimensionID>Crime</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="754d9c11-67c2-45ac-917e-84b1758d5139">
+              <AttributeID>Id Crime</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="067996a6-00a2-475b-a6a8-7a2cce657ac8">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="b7565923-9bcc-40b0-8360-aeae5a181533">
+                    <TableID>dbo_ReportedCrime</TableID>
+                    <ColumnID>IdCrime</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="d55e7ad6-bf73-40e5-99bc-5560cee76c74">
+          <CubeDimensionID>Date Occured</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="29642bfb-d48c-4050-b7f2-d9307f3b3479">
+              <AttributeID>Id Date Occured</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="fcba238b-cd18-4589-b1da-3d483b1c6e83">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="ddfe10ec-ba90-4f51-86b2-c96eaef21f75">
+                    <TableID>dbo_ReportedCrime</TableID>
+                    <ColumnID>IdDateOccured</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="8e742959-d08d-4c54-a919-9c2e3262678d">
+          <CubeDimensionID>Crime Location</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="bd2e4bcc-4c21-4f0e-bd77-cf91330011e1">
+              <AttributeID>Id Crime Location</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="5b7a45b1-0295-458f-80cd-50afa6b133ea">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="dbd69269-7bbd-410e-a7c1-27867074b6f4">
+                    <TableID>dbo_ReportedCrime</TableID>
+                    <ColumnID>IdCrimeLocation</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="ded94dcd-24b8-41bd-99cb-308dd6bd19bb">
+    <DataSourceViewID>NYCrimesStar</DataSourceViewID>
+  </Source>
+</Cube>
